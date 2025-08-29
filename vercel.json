@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "hindu-yuva-umb",
+  "name": "hindu-yuva-website",
   "builds": [
     {
       "src": "*.html",
@@ -16,6 +16,26 @@
     },
     {
       "src": "*.png",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.jpeg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.gif",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.svg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.ico",
       "use": "@vercel/static"
     }
   ],
@@ -55,10 +75,6 @@
     {
       "src": "/career",
       "dest": "/career.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
     }
   ],
   "headers": [
@@ -76,29 +92,19 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
-        }
-      ]
-    },
-    {
-      "source": "/(.*).css",
-      "headers": [
+        },
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/(.*).js",
-      "headers": [
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
         }
       ]
     },
     {
-      "source": "/(.*).(png|jpg|jpeg|gif|ico|svg)",
+      "source": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|ico))",
       "headers": [
         {
           "key": "Cache-Control",
@@ -106,5 +112,9 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {},
+  "env": {
+    "NODE_ENV": "production"
+  }
 }

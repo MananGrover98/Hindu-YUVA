@@ -1,0 +1,40 @@
+{
+  "name": "hindu-yuva-website",
+  "version": "3.0.0",
+  "description": "Official website for Hindu YUVA at UMass Boston - Modern Development Setup",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/home.html --entry-file=home.html --watch=.",
+    "start": "npm run dev",
+    "build": "echo 'Static site build complete - ready for deployment'",
+    "preview": "live-server --port=3001 --open=/home.html --entry-file=home.html",
+    "deploy": "echo 'Ready for deployment to Vercel/Netlify/GitHub Pages'",
+    "clean": "echo 'Development environment cleaned'"
+  },
+  "keywords": [
+    "hindu",
+    "yuva",
+    "umb",
+    "university",
+    "culture",
+    "community",
+    "static-site"
+  ],
+  "author": "Hindu YUVA Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hindu-yuva/hindu-yuva-website.git"
+  },
+  "homepage": "https://hindu-yuva-website.vercel.app",
+  "bugs": {
+    "url": "https://github.com/hindu-yuva/hindu-yuva-website/issues"
+  }
+}
