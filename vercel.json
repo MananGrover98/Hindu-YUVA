@@ -1,48 +1,47 @@
 {
   "version": 2,
-  "name": "hindu-yuva-website",
   "builds": [
     {
       "src": "**/*",
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/",
-      "dest": "/index.html"
+      "source": "/",
+      "destination": "/index.html"
     },
     {
-      "src": "/home",
-      "dest": "/home.html"
+      "source": "/home",
+      "destination": "/home.html"
     },
     {
-      "src": "/about",
-      "dest": "/aboutus.html"
+      "source": "/about",
+      "destination": "/aboutus.html"
     },
     {
-      "src": "/events",
-      "dest": "/events.html"
+      "source": "/events",
+      "destination": "/events.html"
     },
     {
-      "src": "/gallery",
-      "dest": "/gallery.html"
+      "source": "/gallery",
+      "destination": "/gallery.html"
     },
     {
-      "src": "/resources",
-      "dest": "/resources.html"
+      "source": "/resources",
+      "destination": "/resources.html"
     },
     {
-      "src": "/temple",
-      "dest": "/temple.html"
+      "source": "/temple",
+      "destination": "/temple.html"
     },
     {
-      "src": "/academic",
-      "dest": "/academic.html"
+      "source": "/academic",
+      "destination": "/academic.html"
     },
     {
-      "src": "/career",
-      "dest": "/career.html"
+      "source": "/career",
+      "destination": "/career.html"
     }
   ],
   "headers": [
