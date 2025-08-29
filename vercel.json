@@ -42,7 +42,13 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/home.html"
+      "dest": "/home.html",
+      "status": 200
+    },
+    {
+      "src": "/index.html",
+      "dest": "/home.html",
+      "status": 200
     },
     {
       "src": "/home",
